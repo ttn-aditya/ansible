@@ -1,0 +1,15 @@
+- hosts: all
+  vars:
+	hello:
+		- World
+		- Asia
+		- North America
+		- South America
+		- Artic
+		- Antartic
+		- Oceania
+		- Europe
+		- Africa
+  tasks:
+	- name: Ansible list of words debug
+	  msg: "{{hello[2]}}"
